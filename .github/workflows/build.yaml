@@ -42,6 +42,7 @@ jobs:
           ALPINE_VERSION: ${{ matrix.alpine-version }}
         run: |
           ./gen-dockerfile.sh
+          cat Dockerfile
       - id: get-docker-img-id
         env:
           PYTHON_VERSION: ${{ matrix.python-version }}
