@@ -39,7 +39,7 @@ jobs:
       matrix:
         grpcio-version: ${{ fromJson(needs.setup.outputs.grpcio-versions) }}
         python-version: ["3.6", "3.7", "3.8", "3.9"]
-        alpine-version: ["3.13"]
+        alpine-version: ["3.12", "3.13"]
     runs-on: ubuntu-latest
     steps:
       - uses: satackey/action-docker-layer-caching@v0.0.11
