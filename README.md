@@ -17,6 +17,8 @@ Replace `<python-version>` and `<grpcio-version>` with what's appropriate for yo
 
 ### Alpine
 
+
+- 3.12
 - 3.13
 
 If you need another Alpine version, open an issue, I'll add it.
