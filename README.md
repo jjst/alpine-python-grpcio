@@ -23,6 +23,10 @@ If you need another Alpine version, open an issue, I'll add it.
 
 ### Python
 
+All [active Python releases](https://www.python.org/downloads/) are supported. Currently that's the following versions:
+
+- 3.6
+- 3.7
 - 3.8
 - 3.9
 
