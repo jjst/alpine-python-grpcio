@@ -63,6 +63,7 @@ jobs:
         uses: docker/build-push-action@v2
         if: ${{ steps.get-docker-img-id.outputs.img-hash == '' }}
         with:
+          context: .
           push: true
           build-args: grpcio_version=${{ matrix.grpcio-version }}
           tags: jjst/alpine-python-grpcio:${{matrix.alpine-version}}-python${{matrix.python-version}}-grpcio-${{matrix.grpcio-version}}
