@@ -25,4 +25,4 @@ jobs:
         with:
           push: true
           build-args: grpcio_version=${{ matrix.grpcio-version }}
-          tags: jjst/alpine-python-grpcio:3.13-python3.9-grpcio-{{matrix.grpcio-version}}
+          tags: jjst/alpine-python-grpcio:3.13-python3.9-grpcio-${{matrix.grpcio-version}}
