@@ -1,0 +1,19 @@
+name: Run tests
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.9]
+
+    steps:
+      - uses: satackey/action-docker-layer-caching@v0.0.11
+        # Ignore the failure of a step and avoid terminating the job.
+        continue-on-error: true
+      - name: Build docker image
+        run: |
+          docker build -t alpine-python-grpcio:3.13-python3.9-grpcio-1.30.0-r1 .
