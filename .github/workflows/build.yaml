@@ -5,6 +5,9 @@ on: [push]
 jobs:
   build:
 
+    strategy:
+      matrix:
+        grpcio-version: ["1.38.0"]
     runs-on: ubuntu-latest
     steps:
       - uses: satackey/action-docker-layer-caching@v0.0.11
@@ -21,4 +24,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: jjst/alpine-python-grpcio:3.13-python3.9-grpcio-1.30.0-r1
+          build-args: grpcio_version=${{ matrix.grpcio-version }}
+          tags: jjst/alpine-python-grpcio:3.13-python3.9-grpcio-{{matrix.grpcio-version}}
