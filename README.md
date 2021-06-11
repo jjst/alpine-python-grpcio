@@ -8,10 +8,16 @@ Or alternatively, you can use one of these docker images with grpcio precompiled
 
 ## Installation
 
+Images are published with a tag of the form:
 ```
-docker pull jjst/alpine-python-grpcio:3.13-python<python-version>-grpcio<grpcio-version>
+<alpine-version>-python<python-version>-grpcio<grpcio-version>
 ```
-Replace `<python-version>` and `<grpcio-version>` with what's appropriate for you. you can also browse the existing docker image tags on [dockerhub](https://hub.docker.com/r/jjst/alpine-python-grpcio/tags).
+
+So run:
+```
+docker pull jjst/alpine-python-grpcio:<alpine-version>-python<python-version>-grpcio<grpcio-version>
+```
+Replace `<alpine-version`>, `<python-version>` and `<grpcio-version>` with what's appropriate for you. you can also browse the existing docker image tags on [dockerhub](https://hub.docker.com/r/jjst/alpine-python-grpcio/tags).
 
 ## Supported versions
 
